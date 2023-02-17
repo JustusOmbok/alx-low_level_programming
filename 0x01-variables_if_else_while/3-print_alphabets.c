@@ -6,17 +6,25 @@
  */
 int main(void)
 {
-	char abc;
+	char letter = 'a';
+	
+	while (letter <= 'z')
+	{
 
-	for (abc = 'a'; abc <= 'z'; abc++);
-	{
-	putchar(abc);
+		putchar(letter);
+		letter++;
 	}
-	for (abc = 'A'; abc <= 'Z'; abc++);
+	letter = 'A';
+
+	while (letter <=Z)
+
 	{
-	putchar(abc);
+		putchar(letter);
+		letter++;
+
 	}
 	putchar('\n')
 	return (0);
 }
+
 
