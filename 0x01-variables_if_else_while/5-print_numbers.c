@@ -6,12 +6,13 @@
  */
 int main(void)
 {
-int nums;
+	char num = '0'
 	
-for (nums = 0; nums < 10; nums++);
-{
-printf("%d", nums);
-}
-putchar('\n');
-return (0);
+	while (num < '10');
+	{
+		putchar(num);
+		num++;
+	}
+	putchar('\n');
+	return (0);
 }
