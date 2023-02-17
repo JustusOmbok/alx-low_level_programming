@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-int nums;
+int nums = '0';
 
 for (nums = '0'; nums <= '9'; nums++)
 {
 putchar(nums);
 
-if(nums == '9')
+if (nums == '9')
 {
 continue;
 }
