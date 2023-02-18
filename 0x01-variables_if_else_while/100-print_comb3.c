@@ -14,7 +14,7 @@ int main(void)
 		c = 0;
 		while (c < 10)
 		{
-			if (d != c && d < 0)
+			if (d != c && d < c)
 			{
 				putchar('0' + d);
 				putchar('0' + c);
