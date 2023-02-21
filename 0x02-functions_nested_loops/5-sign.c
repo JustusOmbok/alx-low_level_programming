@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_sign - check input if its positive, negative or zero
- * @n: variable to determine if input is greater than, less than or equal to zero
+ * print_sign - check input if its positive, negative
+ * @n: variable to determine if input is greater, less or equal to zero
  * Return: 0 if successful
  */
 
