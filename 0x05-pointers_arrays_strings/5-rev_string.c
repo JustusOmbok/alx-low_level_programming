@@ -22,5 +22,4 @@ void rev_string(char *s)
 		s[count] = end;
 		s[len - count] = beg;
 	}
-}
- 
+} 
