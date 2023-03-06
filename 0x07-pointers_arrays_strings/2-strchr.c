@@ -4,8 +4,8 @@
  * _strchr - prints found character
  * @s: pointer to char
  * @c: char param to be found
- * Return: *s
- * */
+ * Return: *S
+*/
 
 char *_strchr(char *s, char c)
 {
