@@ -7,23 +7,20 @@
  * @argv: an array of pointers to the arguments
  *
  * Return: if prog recieves 2 arguments  -0
- *         if not two arguments - 1
+ * if not two arguments - 1
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, prod;
+	int num1, num2;
 
 	if (arg != 3)
-	{
 		printf("Error\n");
-		return (1);
+	else
+	{
+		num1 = atoi(argv[1], 0, 10);
+		num2 = atoi(argv[2], 0, 10);
+		printf("%d\n", num1 * num2);
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-	prod = num1 * num2;
-
-	printf("%d\n", prod);
 
 	return (0);
 }
