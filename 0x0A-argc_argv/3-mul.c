@@ -17,8 +17,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 	else
 	{
-		num1 = atoi(argv[1], 0, 10);
-		num2 = atoi(argv[2], 0, 10);
+		num1 = strtol(argv[1], 0, 10);
+		num2 = strtol(argv[2], 0, 10);
 		printf("%d\n", num1 * num2);
 	}
 
