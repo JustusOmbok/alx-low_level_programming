@@ -28,7 +28,7 @@ void print_all(const char * const format, ...)
 			printf("%i", va_arg(valist, int));
 			break;
 		case 'f':
-			printf("f", va_arg(valist, double));
+			printf("%f", va_arg(valist, double));
 			break;
 		case 's':
 			arg = va_arg(valist, char *);
