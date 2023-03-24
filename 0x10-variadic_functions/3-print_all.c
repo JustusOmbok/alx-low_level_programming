@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		if (middle)
-			printf(",");
+			printf(", ");
 		switch (format[i])
 		{
 		case 'c':
