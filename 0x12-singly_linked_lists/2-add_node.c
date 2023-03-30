@@ -8,7 +8,7 @@
  * @str: string to get size of
  * Return: size of string
  */
-int _strlen(cons char *str)
+int _strlen(const char *str)
 {
 	int i;
 
@@ -30,6 +30,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!string)
 		return (NULL);
+
 	new = malloc(sizeof(list_t));
 	if (!new)
 	{
