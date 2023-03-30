@@ -3,7 +3,7 @@
  * add_node_end - adds a new node at the end of the end of list_t list
  * @head: struct list_t, node
  * @str: to be duplicated
- * Return: new list_t
+ * Return: address to new element
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
