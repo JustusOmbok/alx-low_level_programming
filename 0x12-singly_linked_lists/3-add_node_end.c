@@ -19,7 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		if (new_list == NULL)
 			return (NULL);
 
-		new_list->str = strup(str);
+		new_list->str = strdup(str);
 		new_list->len = _strlen(str);
 		new_list->next = NULL;
 
