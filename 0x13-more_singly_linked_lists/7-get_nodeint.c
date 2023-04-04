@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * get_nodeint_at_index - returns the nth node of the linked list
@@ -10,12 +11,19 @@
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *current = head;
+	unsigned int count = 0;
 
-	for (unsigned int i = 0; i < index && current != NULL; i++)
+	if (head)
 	{
-		current = current->next;
+		while (head)
+		{
+			if (count == index)
+				return (head);
+
+			head = head->next;
+			count++;
+		}
 	}
 
-	return (current);
+	return (NULL);
 }
