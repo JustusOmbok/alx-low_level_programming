@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 /**
  * read_textfile - reads a text file and prints to POSIX stdout
@@ -9,38 +8,43 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buff;
-	int of;
-	size_t lRead, check;
+	int fd, bytes_read, bytes_written;
+	char *buf;
 
-	if (!filename || !letters)
+	if (filename == NULL)
 		return (0);
 
-	buff = malloc(letters);
-	if (!buff)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
-	of = open(filename, O_RDONLY);
-	if (of == -1)
+
+	buf = malloc(sizeof(char) * letters);
+
+	if (buf == NULL)
 	{
-		free(buff);
+		close(fd);
 		return (0);
 	}
 
-	lRead = read(of, buff, letters);
-	if (lRead < 1)
+	bytes_read = read(fd, buf, letters);
+
+	if (bytes_read == -1)
 	{
-		free(buff);
-		close(of);
+		free(buf);
+		close(fd);
 		return (0);
 	}
 
-	check = write(STDOUT_FILENO, buff, lRead);
+	bytes_written = write(STDOUT_FILENO, buf, bytes_read);
 
-	free(buff);
-	close(of);
-
-	if (!check || check != lRead)
+	if (bytes_written == -1 || bytes_written != bytes_read)
+	{
+		free(buf);
+		close(fd);
 		return (0);
+	}
 
-	return (lRead);
+	free(buf);
+	close(fd);
+	return (bytes_read);
 }
