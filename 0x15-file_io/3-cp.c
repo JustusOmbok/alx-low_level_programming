@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
-		error_exit(99, "Error: Can't write to file");
+		error_exit(99, "Error: Can't write to");
 
 	while ((ret = read(fd_from, buffer, 1024)) > 0)
 	{
