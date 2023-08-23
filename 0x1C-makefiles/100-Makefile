@@ -6,7 +6,9 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 FLAGS = $(CFLAGS)
 RM = rm -f
 
-all: $(OBJ)
+all: $(NAME)
+
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ): $(SRC) m.h
