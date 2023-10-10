@@ -52,9 +52,9 @@ int recursion_search(int *arrs, int low, int high, int val)
 		if (arrs[mid] > val)
 			return (recursion_search(arrs, low, mid, val));
 
-		return recursion_search(arrs, mid + 1, high, val);
+		return (recursion_search(arrs, mid + 1, high, val));
 	}
-	return -1;
+	return (-1);
 }
 
 /**
@@ -69,6 +69,6 @@ int recursion_search(int *arrs, int low, int high, int val)
 int advanced_binary(int *array, size_t size, int value)
 {
 	if (array && size)
-		return (recursion_search(array, 0, (int)size -1, value));
-	return -1;
+		return (recursion_search(array, 0, (int)size - 1, value));
+	return (-1);
 }
